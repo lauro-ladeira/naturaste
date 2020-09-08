@@ -14,6 +14,7 @@ const Header = () => {
             <br />
             100% saboroso!
           </S.Title>
+          <S.ImageLogo />
         </S.TitleContainer>
       </S.HeaderContainer>
     </S.HeaderWrapper>

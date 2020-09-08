@@ -10,7 +10,7 @@ const HeaderImage = ({ className, children }) => {
           relativePath: { eq: "caldo-de-cana-naturaste.png" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1366) {
+            fluid(quality: 90, maxWidth: 300) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
