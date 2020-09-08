@@ -10,7 +10,7 @@ const LogoImage = ({ className, children }) => {
           relativePath: { eq: "logo-naturaste.png" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1366) {
+            fluid(quality: 90, maxWidth: 248) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
