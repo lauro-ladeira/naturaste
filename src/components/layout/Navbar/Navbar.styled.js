@@ -4,7 +4,7 @@ import media from "styled-media-query"
 
 export const NavbarWrapper = styled.div`
   align-items: center;
-  background-color: transparent;
+  background: transparent;
   display: flex;
   height: 100px;
   justify-content: center;
@@ -18,7 +18,7 @@ export const NavbarWrapper = styled.div`
     props.scroll > 0 &&
     props.scroll < 200 &&
     css`
-      background-color: rgba(50, 64, 49, ${props.scroll * (1 / 400)});
+      background: rgba(50, 64, 49, ${props.scroll * (1 / 400)});
       box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
       height: calc(100px - ${props.scroll * (40 / 200)}px);
     `}
@@ -26,7 +26,7 @@ export const NavbarWrapper = styled.div`
   ${props =>
     props.scroll >= 200 &&
     css`
-      background-color: rgba(50, 64, 49, 1);
+      background: rgba(50, 64, 49, 1);
       box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
       height: 60px;
     `}
