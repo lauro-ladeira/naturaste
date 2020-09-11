@@ -3,7 +3,7 @@ import * as S from "./Qualidade.styled"
 
 const Qualidade = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="qualidade">
       <S.Container>
         <S.ImageContainer></S.ImageContainer>
         <S.TextContainer>

@@ -1,13 +1,13 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 import * as S from "./Footer.styled"
 
 const Footer = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="contato">
       <S.Container>
         <S.LogoContainer>
           <S.FooterLogo />
@@ -30,7 +30,7 @@ const Footer = () => {
                 href="https://www.facebook.com/Naturaste-100427631523305"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFacebookF} size="2x" />
+                <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
               </S.socialMediaLink>
             </S.socialMediaContainer>
           </S.Icons>

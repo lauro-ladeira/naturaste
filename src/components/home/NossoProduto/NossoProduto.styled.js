@@ -3,6 +3,10 @@ import media from "styled-media-query"
 
 import NossoProdutoBackground from "./NossoProdutoBackground"
 
+export const Wrapper = styled.div`
+  background-color: #c9deaf;
+  width: 100%;
+`
 export const NossoProdutoWrapper = styled(NossoProdutoBackground)`
   background-color: #c9deaf;
   background-position: right top;
@@ -56,8 +60,8 @@ export const Title = styled.h2`
   text-align: left;
   margin-bottom: 50px;
 
-  ${media.lessThan("920px")`
-    width: 40%;
+  ${media.lessThan("1024px")`
+    margin-top: 30%;
   `}
 
   ${media.lessThan("800px")`

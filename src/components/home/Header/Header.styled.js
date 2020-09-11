@@ -5,6 +5,11 @@ import HeaderBackground from "./HeaderBackground"
 import HeaderImage from "./HeaderImage"
 import LogoImage from "./LogoImage"
 
+export const Wrapper = styled.div`
+  background-color: #324031;
+  width: 100%;
+`
+
 export const HeaderWrapper = styled(HeaderBackground)`
   background-color: #324031;
   background-position: right bottom;

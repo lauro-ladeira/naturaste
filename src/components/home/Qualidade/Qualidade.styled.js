@@ -22,12 +22,12 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 70%;
+  width: 100%;
   /* height: 100%; */
   margin-bottom: 25px;
 
   ${media.lessThan("medium")`
-    width: 50%;
+    width: 100%;
   `}
 `
 
@@ -68,6 +68,6 @@ export const Text = styled.p`
 `
 
 export const ImageContainer = styled.div`
-  width: 30%;
+  /* width: 30%; */
   /* background: red; */
 `

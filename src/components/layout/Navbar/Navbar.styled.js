@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { Link } from "gatsby"
 import media from "styled-media-query"
 
 export const NavbarWrapper = styled.div`
@@ -11,8 +10,6 @@ export const NavbarWrapper = styled.div`
   position: fixed;
   width: 100%;
   z-index: 1;
-
-  ${media.greaterThan("990px")`
 
   ${props =>
     props.scroll > 0 &&
@@ -30,7 +27,6 @@ export const NavbarWrapper = styled.div`
       box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
       height: 60px;
     `}
-  `}
 `
 export const NavbarContainer = styled.nav`
   align-items: center;
@@ -62,19 +58,29 @@ export const MenuContainer = styled.ul`
     top: 80px;
     transition: left 1.1s cubic-bezier(0.19, 1, 0.22, 1);
     
-    width: 100%;
+    width: 80%;
     z-index: 99;
 
     ${props =>
       props.active === "activeMenu" &&
       css`
-        left: 0;
+        left: 20%;
+        box-shadow: 0 0 0 130vw rgba(50, 64, 49, 0.4);
       `}
+    
+    ${props =>
+      props.scroll >= 200 &&
+      css`
+        top: 60px;
+        height: calc(100vh - 60px);
+      `}  
+
   `}
 `
 
 export const MenuItem = styled.li`
   display: inline-block;
+  text-decoration: none;
 
   ${media.lessThan("990px")`
     display: block;
@@ -82,7 +88,7 @@ export const MenuItem = styled.li`
   `}
 `
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled.a`
   color: #ff8c25;
   font-family: "Baloo", sans-serif;
   font-size: 16px;
@@ -101,6 +107,12 @@ export const MenuLink = styled(Link)`
     border-bottom: 1px solid #7eae46;
     font-size: 20px;
     padding: 10% 20px;
+
+    ${props =>
+      props.border === "none" &&
+      css`
+        border-bottom: 1px solid #324031;
+      `}
   `}
 `
 
