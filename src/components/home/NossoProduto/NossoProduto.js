@@ -23,17 +23,24 @@ const NossoProduto = () => {
           </S.Text>
         </S.TextContainer>
         <S.FormContainer>
-          <S.FormTitle>
-            Enviar opinião
-          </S.FormTitle>
+          <S.FormTitle>Enviar opinião</S.FormTitle>
           <S.Label>
             <S.Input type="text" name="name" />
             <S.Label.Text>Nome</S.Label.Text>
           </S.Label>
           <S.Label>
-            <S.Input type="text" name="message"/>
-            <S.Label.Text>Mensagem</S.Label.Text>
+            <S.TextArea type="text" name="message" />
+            <S.Label.Text
+              style={{
+                top: "-118px",
+              }}
+            >
+              Mensagem
+            </S.Label.Text>
           </S.Label>
+          <S.ButtonContainer>
+            <S.Button target="_blank">Enviar</S.Button>
+          </S.ButtonContainer>
         </S.FormContainer>
       </S.NossoProdutoContainer>
     </S.NossoProdutoWrapper>

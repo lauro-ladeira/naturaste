@@ -10,6 +10,10 @@ export const NossoProdutoWrapper = styled(NossoProdutoBackground)`
 
   width: 100%;
   height: 100vh;
+
+  ${media.lessThan("800px")`
+    height: 100%;
+  `}
 `
 
 export const NossoProdutoContainer = styled.div`
@@ -20,6 +24,10 @@ export const NossoProdutoContainer = styled.div`
   ${media.lessThan("large")`
     margin: 0 7.5%;
   `}
+
+  ${media.lessThan("800px")`
+    flex-direction: column;
+  `}
 `
 
 export const TextContainer = styled.div`
@@ -29,10 +37,12 @@ export const TextContainer = styled.div`
   justify-content: space-around;
   width: 50%;
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 
-  ${media.lessThan("medium")`
-    width: 50%;
+  ${media.lessThan("800px")`
+   align-self: center;
+   width: 100%;
+   margin-bottom: 40px;
   `}
 `
 
@@ -46,9 +56,15 @@ export const Title = styled.h2`
   text-align: left;
   margin-bottom: 50px;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("920px")`
+    width: 40%;
+  `}
+
+  ${media.lessThan("800px")`
     font-size: 34px;
     line-height: 34px;
+    margin-top: 30%;
+    width: 100%;
   `}
 
   ${media.lessThan("small")`
@@ -66,10 +82,18 @@ export const Text = styled.p`
   line-height: 28px;
   width: 374px;
 
+  ${media.lessThan("920px")`
+    width: 90%;
+  `}
+
+  ${media.lessThan("800px")`
+   text-align: justify;
+   width: 100%;
+  `}
+
   ${media.lessThan("small")`
     font-size: 14px;
     line-height: 26px;
-    text-align: justify;
   `}
 `
 
@@ -79,9 +103,9 @@ export const FormContainer = styled.div`
   justify-content: flex-end;
   width: 50%;
 
-  input[name='message'] {
-    height: 100px;
-  }
+  ${media.lessThan("800px")`
+   width: 100%;
+  `}
 `
 export const FormTitle = styled.h3`
   font-family: Baloo;
@@ -90,6 +114,7 @@ export const FormTitle = styled.h3`
   font-size: 24px;
   line-height: 42px;
   color: #324031;
+  margin-bottom: 10px;
 `
 export const Label = styled.label``
 Label.Text = styled.span`
@@ -97,7 +122,7 @@ Label.Text = styled.span`
   color: #53585d;
   height: 20px;
   position: relative;
-  top: -52px;
+  top: -48px;
   left: 16px;
 
   display: flex;
@@ -121,10 +146,9 @@ export const Input = styled.input`
 
   outline: 0;
   border: 0;
-  border-bottom: 2px solid #324031;
+  border-bottom: 3px solid #7eae46;
 
   padding: 16px 16px;
-  margin-bottom: 5px;
 
   resize: none;
   border-radius: 4px;
@@ -136,5 +160,75 @@ export const Input = styled.input`
 
   &:focus + span {
     transform: scale(0.7) translateY(1px);
+  }
+`
+export const TextArea = styled.textarea`
+  box-sizing: border-box;
+  background: #f5f5f5;
+  color: #53585d;
+  height: 120px;
+  width: 100%;
+  font-size: 18px;
+
+  outline: 0;
+  border: 0;
+  border-bottom: 3px solid #7eae46;
+
+  padding: 16px 16px;
+
+  resize: none;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-bottom-color: #ff8c25;
+  }
+
+  &:focus + span {
+    transform: scale(0.7) translateY(1px);
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  ${media.lessThan("medium")`
+    /* justify-content: flex-start;
+    padding: 30px 0; */
+  `}
+  ${media.lessThan("630px")`
+    /* justify-content: center; */
+  `}
+`
+
+export const Button = styled.button`
+  box-sizing: border-box;
+  padding: 5px 56px;
+
+  background: #324031;
+  border-radius: 10px;
+  border: none;
+  font-family: Baloo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  color: #7eae46;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: background 0.3s, color 0.3s;
+
+  &.active,
+  &:hover {
+    background: #ff8c25;
+    color: #324031;
   }
 `
