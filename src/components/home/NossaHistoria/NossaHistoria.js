@@ -3,7 +3,7 @@ import * as S from "./NossaHistoria.styled"
 
 const NossaHistoria = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="historia">
       <S.Container>
         <S.TextContainer>
           <S.Title>Nossa História</S.Title>

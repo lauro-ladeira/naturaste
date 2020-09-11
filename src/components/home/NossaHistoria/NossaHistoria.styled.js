@@ -61,12 +61,12 @@ export const Text = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;
+  text-align: justify;
   /* width: 374px; */
 
   ${media.lessThan("medium")`
     font-size: 14px;
     line-height: 26px;
-    text-align: justify;
   `}
 `
 
