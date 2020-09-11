@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import * as S from "./Navbar.styled"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 import Logo from "../Logo"
 
 const Navbar = () => {
@@ -34,33 +34,38 @@ const Navbar = () => {
         </S.LogoContainer>
         <S.MenuContainer active={active ? "activeMenu" : null} scroll={scroll}>
           <S.MenuItem>
-            <AnchorLink to="/#inicio">
-              <S.MenuLink activeClassName="active">Início</S.MenuLink>
-            </AnchorLink>
+            <S.AnchorLinkkk to="/#inicio">
+              {/* <S.MenuLink activeClassName="active">Início</S.MenuLink> */}
+              Início
+            </S.AnchorLinkkk>
           </S.MenuItem>
           <S.MenuItem>
-            <AnchorLink to="/#produto">
-              <S.MenuLink activeClassName="active">Nosso produto</S.MenuLink>
-            </AnchorLink>
+            <S.AnchorLinkkk to="/#produto">
+              {/* <S.MenuLink activeClassName="active">Nosso produto</S.MenuLink> */}
+              Nosso produto
+            </S.AnchorLinkkk>
           </S.MenuItem>
           <S.MenuItem>
-            <AnchorLink to="/#historia">
-              <S.MenuLink activeClassName="active">Nossa história</S.MenuLink>
-            </AnchorLink>
+            <S.AnchorLinkkk to="/#historia">
+              {/* <S.MenuLink activeClassName="active">Nossa história</S.MenuLink> */}
+              Nossa história
+            </S.AnchorLinkkk>
           </S.MenuItem>
           <S.MenuItem>
-            <AnchorLink to="/#qualidade">
-              <S.MenuLink activeClassName="active">
+            <S.AnchorLinkkk to="/#qualidade">
+              {/* <S.MenuLink activeClassName="active">
                 Qualidade e Higiene
-              </S.MenuLink>
-            </AnchorLink>
+              </S.MenuLink> */}
+              Qualidade e Higiene
+            </S.AnchorLinkkk>
           </S.MenuItem>
           <S.MenuItem>
-            <AnchorLink to="/#contato">
-              <S.MenuLink activeClassName="active" border="none">
+            <S.AnchorLinkkk to="/#contato">
+              {/* <S.MenuLink activeClassName="active" border="none">
                 Contato
-              </S.MenuLink>
-            </AnchorLink>
+              </S.MenuLink> */}
+              Contato
+            </S.AnchorLinkkk>
           </S.MenuItem>
         </S.MenuContainer>
         <S.Burger onClick={toggleClassName}>

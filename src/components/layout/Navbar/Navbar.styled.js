@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export const NavbarWrapper = styled.div`
   align-items: center;
@@ -88,7 +89,7 @@ export const MenuItem = styled.li`
   `}
 `
 
-export const MenuLink = styled.a`
+export const AnchorLinkkk = styled(AnchorLink)`
   color: #ff8c25;
   font-family: "Baloo", sans-serif;
   font-size: 16px;
