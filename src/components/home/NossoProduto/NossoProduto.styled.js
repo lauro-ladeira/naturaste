@@ -203,7 +203,7 @@ export const ButtonContainer = styled.div`
     padding: 30px 0; */
   `}
   ${media.lessThan("630px")`
-    /* justify-content: center; */
+    display: block;
   `}
 `
 
@@ -235,4 +235,8 @@ export const Button = styled.button`
     background: #ff8c25;
     color: #324031;
   }
+
+  ${media.lessThan("630px")`
+    width: 100%;
+  `}
 `
