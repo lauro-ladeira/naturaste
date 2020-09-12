@@ -1,20 +1,26 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
+import QualidadeImage from "./QualidadeImage"
+
 export const Wrapper = styled.div`
   background-color: #fff;
   width: 100%;
-  padding-bottom: 40px;
+  padding-top: 40px;
 `
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 12.5%;
+  margin: 0 12.5% 0 0;
   padding-top: 70px;
 
   ${media.lessThan("large")`
-    margin: 0 7.5%;
+    margin: 0 7.5% 0 0;
   `}
+
+  /* ${media.lessThan("800px")`
+    flex-direction: column-reverse;
+  `} */
 `
 
 export const TextContainer = styled.div`
@@ -22,13 +28,18 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
+  width: 70%;
   /* height: 100%; */
-  margin-bottom: 25px;
+  margin-left: 20px;
+  margin-bottom: 50px;
 
-  ${media.lessThan("medium")`
-    width: 100%;
+  ${media.lessThan("1170px")`
+    width: 50%;
   `}
+
+  /* ${media.lessThan("800px")`
+    width: 100%;
+  `} */
 `
 
 export const Title = styled.h2`
@@ -67,7 +78,12 @@ export const Text = styled.p`
   `}
 `
 
-export const ImageContainer = styled.div`
-  /* width: 30%; */
-  /* background: red; */
+export const ImageContainer = styled(QualidadeImage)`
+  background-position: left bottom;
+  background-size: contain;
+  width: 50%;
+
+  /* ${media.lessThan("800px")`
+    width: 100%;
+  `} */
 `
