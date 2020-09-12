@@ -13,14 +13,20 @@ export const Container = styled.div`
   display: flex;
   margin: 0 12.5% 0 0;
   padding-top: 70px;
+  flex-direction: row;
 
+  /**alterações do laurim */
+  width: 100%;
+  height: 900px;
+  /********************** */
+  
   ${media.lessThan("large")`
     margin: 0 7.5% 0 0;
   `}
 
-  /* ${media.lessThan("800px")`
+  ${media.lessThan("800px")`
     flex-direction: column-reverse;
-  `} */
+  `}
 `
 
 export const TextContainer = styled.div`
@@ -35,9 +41,7 @@ export const TextContainer = styled.div`
 
   ${media.lessThan("1170px")`
     width: 50%;
-  `}
-
-  /* ${media.lessThan("800px")`
+  `}/* ${media.lessThan("800px")`
     width: 100%;
   `} */
 `
@@ -81,9 +85,17 @@ export const Text = styled.p`
 export const ImageContainer = styled(QualidadeImage)`
   background-position: left bottom;
   background-size: contain;
-  width: 50%;
-
+  width: 100%;
+  height: 100%;
+ 
   /* ${media.lessThan("800px")`
     width: 100%;
   `} */
+`
+
+export const ImgWrapper = styled.div`
+  width: 50%;
+  height: 100%;
+  /* width: 100%; */
+  background: red;
 `

@@ -5,7 +5,9 @@ const Qualidade = () => {
   return (
     <S.Wrapper id="qualidade">
         <S.Container>
-          <S.ImageContainer></S.ImageContainer>
+          <S.ImgWrapper>
+            <S.ImageContainer />
+          </S.ImgWrapper>
           <S.TextContainer>
             <S.Title>Qualidade e Higiene</S.Title>
             <S.Text>

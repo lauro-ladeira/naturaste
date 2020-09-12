@@ -23,7 +23,7 @@ const QualidadeImage = ({ className, children }) => {
     <BackgroundImage
       Tag="section"
       className={className}
-      fluid={qualidadeImage.childImageSharp.fluid} 
+      fluid={qualidadeImage.childImageSharp.fluid}
       id="gbitest"
       role="img"
       aria-label="gbitest"
@@ -35,3 +35,27 @@ const QualidadeImage = ({ className, children }) => {
 }
 
 export default QualidadeImage
+
+// import React from "react"
+// import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
+
+// const QualidadeImage = () => {
+//   const { qualidadeImage } = useStaticQuery(
+//     graphql`
+//       query {
+//         qualidadeImage: file(relativePath: { eq: "imagem-qualidade.png" }) {
+//           childImageSharp {
+//             fluid(quality: 90, maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+
+//   return <Img fluid={qualidadeImage.childImageSharp.fluid} />
+// }
+
+// export default QualidadeImage
