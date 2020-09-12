@@ -60,8 +60,8 @@ const Navbar = () => {
             </S.AnchorLinkkk>
           </S.MenuItem>
           <S.MenuItem>
-            <S.AnchorLinkkk to="/#contato">
-              {/* <S.MenuLink activeClassName="active" border="none">
+            <S.AnchorLinkkk to="/#contato" border="none">
+              {/* <S.MenuLink activeClassName="active">
                 Contato
               </S.MenuLink> */}
               Contato

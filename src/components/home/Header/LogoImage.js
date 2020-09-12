@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 
 const LogoImage = ({ className, children }) => {
-  const { headerImage } = useStaticQuery(
+  const { logoImage } = useStaticQuery(
     graphql`
       query {
-        headerImage: file(
+        logoImage: file(
           relativePath: { eq: "logo-naturaste.png" }
         ) {
           childImageSharp {
@@ -23,7 +23,7 @@ const LogoImage = ({ className, children }) => {
     <BackgroundImage
       Tag="section"
       className={className}
-      fluid={headerImage.childImageSharp.fluid} 
+      fluid={logoImage.childImageSharp.fluid} 
       id="gbitest"
       role="img"
       aria-label="gbitest"
