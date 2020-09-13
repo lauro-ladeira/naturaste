@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   background-color: #fff;
   width: 100%;
   padding-top: 40px;
+
+  ${media.lessThan("800px")`
+    padding-top: 10px;
+  `}
 `
 
 export const Container = styled.div`
@@ -17,15 +21,17 @@ export const Container = styled.div`
 
   /**alterações do laurim */
   width: 100%;
-  height: 900px;
+  height: 70vh;
   /********************** */
-  
+
   ${media.lessThan("large")`
     margin: 0 7.5% 0 0;
   `}
 
   ${media.lessThan("800px")`
     flex-direction: column-reverse;
+    align-items: center;
+    height: 900px;
   `}
 `
 
@@ -34,16 +40,15 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 70%;
+  width: 37.5%;
   /* height: 100%; */
   margin-left: 20px;
   margin-bottom: 50px;
 
-  ${media.lessThan("1170px")`
-    width: 50%;
-  `}/* ${media.lessThan("800px")`
-    width: 100%;
-  `} */
+  ${media.lessThan("800px")`
+    margin-left: 0;
+    width: 85%;
+  `}
 `
 
 export const Title = styled.h2`
@@ -75,6 +80,7 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 28px;
   text-align: justify;
+  margin-bottom: 50px;
 
   ${media.lessThan("small")`
     font-size: 14px;
@@ -87,7 +93,7 @@ export const ImageContainer = styled(QualidadeImage)`
   background-size: contain;
   width: 100%;
   height: 100%;
- 
+
   /* ${media.lessThan("800px")`
     width: 100%;
   `} */
@@ -96,6 +102,8 @@ export const ImageContainer = styled(QualidadeImage)`
 export const ImgWrapper = styled.div`
   width: 50%;
   height: 100%;
-  /* width: 100%; */
-  background: red;
+
+  ${media.lessThan("800px")`
+    width: 100%;
+  `}/* width: 100%; */
 `
